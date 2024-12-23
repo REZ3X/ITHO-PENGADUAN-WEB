@@ -4,6 +4,8 @@ import ThreeContainers from "@/components/categoryChoice";
 import SearchBar from "@/components/searchBar";
 import HeroSection from "@/components/hero";
 import AllPlatform from "@/components/allPlatform";
+import MostWatch from "@/components/mostWatch";
+import FAQ from "@/components/litePengaduan";
 
 export default function Home() {
     return (
@@ -13,6 +15,8 @@ export default function Home() {
                 <Jumbotron />
                 <SearchBar placeholder="Cari pengaduan..." onSearch={(query) => console.log(query)} />
                 <ThreeContainers />
+                <MostWatch />
+                <FAQ />
                 <AllPlatform />
                 <Footer />
             </main>

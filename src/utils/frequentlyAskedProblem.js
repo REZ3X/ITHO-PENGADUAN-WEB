@@ -64,61 +64,61 @@ const DataPengaduan = () => (
             id: 11,
             title: 'Kesalahan Saat Melakukan Pemesanan',
             report: 'Saya mencoba memesan lapangan futsal untuk tanggal tertentu, tetapi setelah selesai pembayaran, jadwal yang muncul berbeda dari yang saya pilih. Mohon bantuannya untuk memperbaiki jadwal pemesanan saya.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 12,
             title: 'Metode Pembayaran Tidak Berfungsi',
             report: 'Saat saya memilih metode pembayaran melalui kartu kredit, transaksi saya gagal terus. Apakah ada masalah pada sistem pembayaran?',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 13,
             title: 'Informasi Lapangan Tidak Lengkap',
             report: 'Saya melihat detail lapangan tenis di website, tetapi tidak ada informasi tentang fasilitas seperti kamar mandi atau parkiran. Hal ini membuat saya ragu untuk memesan.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 14,
             title: 'Harga yang Ditampilkan Berbeda dengan Invoice',
             report: 'Saat saya memesan lapangan basket, harga yang ditampilkan di awal berbeda dengan total harga di invoice setelah selesai memesan. Mohon penjelasannya terkait perbedaan ini.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 15,
             title: 'Tombol Konfirmasi Tidak Berfungsi',
             report: 'Saya sudah mengisi semua detail pemesanan, tetapi tombol "Konfirmasi Pemesanan" tidak bisa diklik. Saya tidak dapat melanjutkan proses pemesanan.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 16,
             title: 'Peta Lokasi Tidak Tampil',
             report: 'Ketika saya mencoba mencari lokasi lapangan badminton yang ingin saya sewa, peta lokasi tidak muncul di halaman detail lapangan. Mohon diperbaiki.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 17,
             title: 'Jadwal yang Ditampilkan Tidak Akurat',
             report: 'Saya memesan lapangan voli untuk jam 18.00-20.00, tetapi setelah konfirmasi, jadwalnya berubah menjadi 16.00-18.00. Ini sangat mengganggu karena tidak sesuai dengan jadwal saya.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 18,
             title: 'Lapangan yang Dipesan Sudah Penuh',
             report: 'Saya sudah memesan lapangan sepak bola melalui website, tetapi ketika datang ke lokasi, saya diberitahu bahwa lapangan sudah penuh. Mohon sistemnya diperbaiki agar kejadian ini tidak terulang.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 19,
             title: 'Fitur Ulasan Tidak Aktif',
             report: 'Saya ingin memberikan ulasan tentang pengalaman menggunakan lapangan bulu tangkis yang saya sewa, tetapi fitur ulasan di website tidak bisa diakses.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 20,
             title: 'Kesulitan Mengganti Jadwal Pemesanan',
             report: 'Saya ingin mengganti jadwal penyewaan lapangan karena ada perubahan rencana, tetapi tidak menemukan opsi untuk mengubah jadwal di website. Mohon bantuannya.',
-            layanan: 'GoSport'
+            layanan: 'GoSports'
         },
         {
             id: 21,

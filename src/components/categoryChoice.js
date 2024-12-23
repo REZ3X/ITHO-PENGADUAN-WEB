@@ -29,7 +29,7 @@ const ThreeContainers = () => {
                 iconSrc="images/support.png"
                 title="Buat Pengaduan"
                 description="Solusi meyelesaikan kendala Layanan Itho Indostock."
-                link="/pengaduan"
+                link="/pengaduanDasbor"
             />
             <Container
                 iconSrc="images/solution.png"
