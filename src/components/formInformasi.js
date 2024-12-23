@@ -1,10 +1,17 @@
-export default function FormInformasi({ isExpanded, toggleExpand }) {
+export default function FormInformasi({isExpanded, toggleExpand}) {
     return (
-        <div className={`container mx-auto p-4 bg-mediumGreen rounded-lg shadow-md w-[500px] ${!isExpanded ? 'hover:bg-darkGreen' : ''}`}>
+        <div
+            className={`container transition duration-500 mx-auto p-4 bg-mediumGreen rounded-lg shadow-md w-full ${!isExpanded ? 'hover:bg-darkGreen' : ''}`}>
             <div className="h-full flex justify-between items-center cursor-pointer" onClick={toggleExpand}>
                 <h1 className="text-2xl text-white font-bold">Permintaan Informasi</h1>
+                <svg
+                    className={`w-6 h-6 text-white transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
             </div>
-            <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-[700px]' : 'max-h-0'}`}>
+            <div
+                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-[700px]' : 'max-h-0'}`}>
                 <div className="mt-4">
                     <form className="flex flex-col" action="https://formsubmit.co/prozycal@gmail.com" method="POST">
                         <div className="mb-4">
@@ -39,7 +46,8 @@ export default function FormInformasi({ isExpanded, toggleExpand }) {
                             </select>
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="isi" className="block text-sm font-medium text-white">Detail Permintaan</label>
+                            <label htmlFor="isi" className="block text-sm font-medium text-white">Detail
+                                Permintaan</label>
                             <textarea id="isi" name="isi" required
                                       className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 h-32"></textarea>
                         </div>

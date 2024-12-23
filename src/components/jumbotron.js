@@ -1,9 +1,9 @@
 // components/jumbotron.js
 export default function Jumbotron() {
     return (
-        <div className="relative bg-darkGreen text-white py-12 text-center w-full">
+        <div className="relative bg-darkGreen text-white py-12 text-center w-full flex flex-col gap-4 justify-center items-center">
             <h1 className="text-6xl font-bold">Layanan Aspirasi dan Pengaduan Online</h1>
-            <p className="mt-4 mb-8">lorem ipsum</p>
+            <p className="mt-4 mb-10 w-full max-w-screen-lg">Layanan Aspirasi dan Pengaduan Online PT ITHO Indostock merupakan wadah yang dirancang untuk memberikan kesempatan kepada masyarakat dan pelanggan untuk menyampaikan aspirasi serta pengaduan terkait produk dan layanan perusahaan.</p>
 
             {/* Wavy SVG */}
             <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">

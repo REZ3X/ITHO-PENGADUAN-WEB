@@ -1,10 +1,16 @@
 export default function FormPengaduan({ isExpanded, toggleExpand }) {
     return (
-        <div className={`container mx-auto p-4 bg-mediumGreen rounded-lg shadow-md w-[500px] ${!isExpanded ? 'hover:bg-darkGreen' : ''}`}>
-            <div className="flex justify-between items-center cursor-pointer" onClick={toggleExpand}>
+        <div className={`container transition duration-500 mx-auto p-4 bg-mediumGreen rounded-lg shadow-md w-full ${!isExpanded ? 'hover:bg-darkGreen' : ''}`}>
+            <div className="flex justify-between items-center cursor-pointer w-1/4" onClick={toggleExpand}>
                 <h1 className="text-2xl text-white font-bold">Pengaduan</h1>
+                <svg
+                    className={`w-6 h-6 text-white transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
             </div>
-            <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-[700px]' : 'max-h-0'}`}>
+            <div
+                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-[700px]' : 'max-h-0'}`}>
                 <div className="mt-4">
                     <form className="flex flex-col" action="https://formsubmit.co/prozycal@gmail.com" method="POST">
                         <div className="mb-4">

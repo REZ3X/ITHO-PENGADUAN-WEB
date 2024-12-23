@@ -1,6 +1,9 @@
 import Jumbotron from "@/components/jumbotron";
 import Footer from "@/components/footer";
-import ChoiceContainer from "@/components/choiceContainer";
+import ThreeContainers from "@/components/categoryChoice";
+import SearchBar from "@/components/searchBar";
+import HeroSection from "@/components/hero";
+import AllPlatform from "@/components/allPlatform";
 
 export default function Home() {
     return (
@@ -8,7 +11,9 @@ export default function Home() {
             <div className="fixed inset-0 bg-backgroundImg bg-no-repeat bg-cover"></div>
             <main className="relative flex flex-col items-center gap-2">
                 <Jumbotron />
-                <ChoiceContainer />
+                <SearchBar placeholder="Cari pengaduan..." onSearch={(query) => console.log(query)} />
+                <ThreeContainers />
+                <AllPlatform />
                 <Footer />
             </main>
         </div>
