@@ -17,7 +17,6 @@ export default function Home() {
                 <ThreeContainers />
                 <MostWatch />
                 <FAQ />
-                <AllPlatform />
                 <Footer />
             </main>
         </div>

@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="w-full px-4 lg:px-16 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="#" className="flex flex-col items-start">
+                        <p href="#" className="flex flex-col items-start">
                             <img
                                 src="https://indostock.id/img/logo-itho.png"
                                 alt="Logo"
@@ -13,7 +13,7 @@ export default function Footer() {
                             <span className="text-sm text-white w-72">
                                 PT ITHO Indostock adalah perusahaan teknologi informasi yang bergerak pada pengembangan berbagai macam aplikasi dengan memberikan prioritas pada layanan pembuatan aplikasi dan website, penyediaan internet, penyediaan hardware, serta jasa konsultan teknologi informasi.
                             </span>
-                        </a>
+                        </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
@@ -62,18 +62,18 @@ export default function Footer() {
                             <ul className="text-white font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="#"
+                                        href="https://www.instagram.com/smarteschool.id"
                                         className="hover:underline"
                                     >
-                                        GitHub
+                                        Instagram
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="#"
+                                        href="https://api.whatsapp.com/send?phone=6287889192581&text=Halo,%20CS%20PT.%20ITHO%20INDOSTOCK"
                                         className="hover:underline"
                                     >
-                                        Twitter
+                                        WhatsApp
                                     </a>
                                 </li>
                             </ul>
@@ -85,7 +85,7 @@ export default function Footer() {
                             <ul className="text-white font-medium w-32">
                                 <li className="mb-4 w-32">
                                     <a
-                                        href="#"
+                                        href="https://maps.app.goo.gl/NM1AVTL2DGHR3DPt7"
                                         className="hover:underline w-32 text-sm"
                                     >
                                         Gedung ITHO, Jl. Karang Tengah Raya, Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota 12440

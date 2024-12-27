@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import DataPengaduan from '@/utils/frequentlyAskedProblem';
 import SearchPengaduan from '@/components/searchPengaduan';
+import {useRouter} from "next/router";
 
 const FrequentlyAskedProblems = () => {
+    const router = useRouter();
     const problems = useMemo(() => DataPengaduan(), []);
     const [expandedId, setExpandedId] = useState(null);
     const [selectedFilters, setSelectedFilters] = useState([]);
@@ -14,7 +16,7 @@ const FrequentlyAskedProblems = () => {
     };
 
     const handleFilterChange = (event) => {
-        const { value, checked } = event.target;
+        const {value, checked} = event.target;
         setSelectedFilters((prevFilters) =>
             checked ? [...prevFilters, value] : prevFilters.filter((filter) => filter !== value)
         );
@@ -43,14 +45,22 @@ const FrequentlyAskedProblems = () => {
     const filterOptions = useMemo(() => ['Smart E School', 'GoSports', 'KantinGo'], []);
 
     return (
-        <div className="min-h-screen w-[900px] rounded-lg mb-6 backdrop-blur-xl p-4">
-            <SearchPengaduan onSearch={handleSearch} />
+        <div className="min-h-screen w-full lg:w-1/2 sm:w-2/3 bg-blue rounded-lg mb-6 backdrop-blur-xl p-4">
+
+            <SearchPengaduan onSearch={handleSearch}/>
             <div className="mb-4">
+                <button onClick={() => router.push('/')} className="btn bg-white text-[#5a6b58] py-2 px-4 rounded mb-4 mr-4">
+                    Back
+                </button>
                 <button
                     onClick={() => setShowFilter(!showFilter)}
-                    className="btn bg-blue text-white py-1 px-4 rounded"
+                    className="btn bg-darkBlue text-white py-1 px-4 mr-4 rounded"
                 >
                     Filter by Layanan
+                </button>
+                <button onClick={() => router.push('/pengaduanForm')}
+                        className="btn bg-softBlue text-white py-1 px-4 rounded">
+                    Buat Pengaduan
                 </button>
                 {showFilter && (
                     <div className="mt-2 p-4 bg-white rounded shadow">
@@ -72,7 +82,8 @@ const FrequentlyAskedProblems = () => {
                             <button onClick={resetFilters} className="btn bg-red-500 text-white py-1 px-4 rounded mr-2">
                                 Reset Filters
                             </button>
-                            <button onClick={() => setShowFilter(false)} className="btn bg-blue-500 text-white py-1 px-4 rounded">
+                            <button onClick={() => setShowFilter(false)}
+                                    className="btn bg-blue text-white py-1 px-4 rounded">
                                 Apply Filters
                             </button>
                         </div>
@@ -92,7 +103,7 @@ const FrequentlyAskedProblems = () => {
                                 <span
                                     className={`ml-2 transform transition-transform duration-500 ${expandedId === problem.id ? 'rotate-180' : 'rotate-0'}`}
                                 >
-                                    ▼
+                                    <i className="bi bi-chevron-down text-xm"></i>
                                 </span>
                             </div>
                         </div>

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Container = ({ iconSrc, title, description, link }) => {
-    const router = useRouter(); // Use useRouter from next/router
+    const router = useRouter();
 
     const handleClick = () => {
-        router.push(link); // Navigate to the desired link
+        router.push(link);
     };
 
     return (
@@ -23,26 +25,32 @@ const Container = ({ iconSrc, title, description, link }) => {
 };
 
 const ThreeContainers = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <div className="flex mt-6 flex-col lg:flex-row w-3/4 gap-6">
-            <Container
-                iconSrc="images/support.png"
-                title="Buat Pengaduan"
-                description="Solusi meyelesaikan kendala Layanan Itho Indostock."
-                link="/pengaduan"
-            />
-            <Container
-                iconSrc="images/solution.png"
-                title="Buat Aspirasi"
-                description="Kirim saran dan masukan untuk layanan Itho Indostock."
-                link="/aspirasiForm"
-            />
-            <Container
-                iconSrc="images/note.png"
-                title="Permintaan Informasi"
-                description="Ajukan permintaan informasi terkait layanan Itho Indostock."
-                link="/informasiForm"
-            />
+        <div data-aos="fade-up" className="w-full flex justify-center items-center">
+            <div className="grid mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full p-4 lg:p-0 md:w-3/4 gap-6">
+                <Container
+                    iconSrc="images/support.png"
+                    title="Buat Pengaduan"
+                    description="Solusi meyelesaikan kendala Layanan ITHO Indostock."
+                    link="/pengaduan"
+                />
+                <Container
+                    iconSrc="images/solution.png"
+                    title="Buat Aspirasi"
+                    description="Kirim saran dan masukan untuk layanan ITHO Indostock."
+                    link="/aspirasiForm"
+                />
+                <Container
+                    iconSrc="images/note.png"
+                    title="Permintaan Informasi"
+                    description="Ajukan permintaan informasi terkait layanan ITHO Indostock."
+                    link="/informasiForm"
+                />
+            </div>
         </div>
     );
 };

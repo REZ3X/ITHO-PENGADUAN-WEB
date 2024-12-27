@@ -1,14 +1,18 @@
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PengaduanForm = () => {
     const router = useRouter();
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-backgroundImg bg-no-repeat bg-cover">
-            <button onClick={() => router.push('/pengaduan')} className="btn bg-white text-[#5a6b58] fixed top-4 left-4 py-2 px-4 rounded">
-                Back
-            </button>
-            <div className="container transition duration-500 mx-auto p-4 mb-4 bg-blue rounded-lg shadow-md w-[700px] mt-16">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-backgroundImg bg-no-repeat bg-cover w-full p-4">
+            <div className="container transition duration-500 mx-auto p-4 mb-4 bg-blue rounded-lg shadow-md w-full lg:w-1/2 sm:w-2/3 mt-16" data-aos="fade-up">
                 <h1 className="text-2xl text-white font-bold mb-4">Pengaduan</h1>
                 <form className="flex flex-col" action="https://formsubmit.co/prozycal@gmail.com" method="POST">
                     <div className="mb-4">
@@ -41,7 +45,16 @@ const PengaduanForm = () => {
                             <option value="permintaan informasi">PerpusGo</option>
                         </select>
                     </div>
-                    <button type="submit" className="bg-blue text-white px-4 py-2 rounded-md hover:bg-oliveGreen focus:outline-none focus:ring-2 focus:ring-offset-2">Submit</button>
+                    <div className="flex justify-between">
+                        <button onClick={() => router.push('/')}
+                                className="bg-blue border-2 text-white px-4 py-2 rounded-md">
+                            Back
+                        </button>
+                        <button type="submit"
+                                className="btn bg-white text-[#5a6b58] py-2 px-4 rounded">
+                            Submit
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

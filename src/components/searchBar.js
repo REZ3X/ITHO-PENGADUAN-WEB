@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DataPengaduan from '@/utils/frequentlyAskedProblem';
 
-const SearchBar = ({ placeholder, onSearch }) => {
+const SearchBar = ({ placeholder }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredResults, setFilteredResults] = useState([]);
+
     const handleSearch = (event) => {
-        if (event.key === 'Enter') {
-            onSearch(event.target.value);
+        const value = event.target.value;
+        setSearchTerm(value);
+
+        if (value) {
+            const results = DataPengaduan().filter(problem =>
+                problem.title.toLowerCase().includes(value.toLowerCase())
+            );
+            setFilteredResults(results);
+        } else {
+            setFilteredResults([]);
         }
     };
 
     return (
-        <div className="flex justify-center items-center p-4 w-full">
+        <div className="flex flex-col justify-center items-center p-4 w-full">
             <div className="relative flex h-10 w-full md:w-2/5">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg
@@ -31,9 +43,23 @@ const SearchBar = ({ placeholder, onSearch }) => {
                     type="text"
                     className="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-white focus:ring-blue-500 focus:border-transparent focus:outline-none"
                     placeholder={placeholder}
-                    onKeyDown={handleSearch}
+                    value={searchTerm}
+                    onChange={handleSearch}
                 />
             </div>
+            {searchTerm && filteredResults.length > 0 && (
+                <div className="relative w-full md:w-2/5">
+                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+                        <ul>
+                            {filteredResults.map(problem => (
+                                <li key={problem.id} className="p-2 hover:bg-gray-100 cursor-pointer">
+                                    {problem.title}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
