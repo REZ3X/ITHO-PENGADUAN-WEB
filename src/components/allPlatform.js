@@ -9,7 +9,7 @@ const services = [
 
 const AllServices = () => {
     return (
-        <div className="flex text-white align-baseline flex-col justify-center items-center mt-4 h-18 backdrop-blur-2xl">
+        <div className="flex text-white rounded-md align-baseline bg-blue flex-col justify-center items-center mt-4 h-18 backdrop-blur-2xl">
             <h1>Layanan Kami</h1>
             <div className={`flex flex-row`}>
                 {services.map((service, index) => (

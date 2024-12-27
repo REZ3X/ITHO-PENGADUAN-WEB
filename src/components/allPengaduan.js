@@ -48,7 +48,7 @@ const FrequentlyAskedProblems = () => {
             <div className="mb-4">
                 <button
                     onClick={() => setShowFilter(!showFilter)}
-                    className="btn bg-[#5a6b58] text-white py-1 px-4 rounded"
+                    className="btn bg-blue text-white py-1 px-4 rounded"
                 >
                     Filter by Layanan
                 </button>

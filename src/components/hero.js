@@ -28,8 +28,8 @@ const HeroSection = () => {
                         />
                     </svg>
                 </a>
-                <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl">
-                    Layanan Aspirasi dan Pengaduan Online
+                <h1 className="mb-4 text-4xl font-bold font-sans text-gray-900 md:text-5xl lg:text-6xl">
+                    Layanan Aspirasi dan Pengaduan Onlinee
                 </h1>
                 <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48">Layanan Aspirasi dan Pengaduan Online PT ITHO Indostock merupakan wadah yang dirancang untuk memberikan kesempatan kepada masyarakat dan pelanggan untuk menyampaikan aspirasi serta pengaduan terkait produk dan layanan perusahaan.</p>
             </div>

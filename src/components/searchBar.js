@@ -8,8 +8,8 @@ const SearchBar = ({ placeholder, onSearch }) => {
     };
 
     return (
-        <div className="flex justify-center items-center mt-4">
-            <div className="relative flex h-10 w-[450px]">
+        <div className="flex justify-center items-center p-4 w-full">
+            <div className="relative flex h-10 w-full md:w-2/5">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg
                         className="w-5 h-5 text-gray-500"
@@ -29,7 +29,7 @@ const SearchBar = ({ placeholder, onSearch }) => {
                 </div>
                 <input
                     type="text"
-                    className="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-transparent focus:outline-none"
+                    className="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-white focus:ring-blue-500 focus:border-transparent focus:outline-none"
                     placeholder={placeholder}
                     onKeyDown={handleSearch}
                 />

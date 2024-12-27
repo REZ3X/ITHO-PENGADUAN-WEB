@@ -9,7 +9,7 @@ const Container = ({ iconSrc, title, description, link }) => {
     };
 
     return (
-        <div className="container flex flex-col items-center justify-between p-4 rounded-lg shadow-md h-[320px] w-80 bg-[#5a6b58]">
+        <div className="container flex flex-col items-center justify-between p-4 rounded-lg shadow-md h-[320px] w-full bg-blue">
             <div className="icon mb-2">
                 <img src={iconSrc} alt={`${title} icon`} className="invert brightness-0 w-24" />
             </div>
@@ -24,24 +24,24 @@ const Container = ({ iconSrc, title, description, link }) => {
 
 const ThreeContainers = () => {
     return (
-        <div className="flex mt-6 flex-col lg:flex-row lg:space-x-4">
+        <div className="flex mt-6 flex-col lg:flex-row w-3/4 gap-6">
             <Container
                 iconSrc="images/support.png"
                 title="Buat Pengaduan"
                 description="Solusi meyelesaikan kendala Layanan Itho Indostock."
-                link="/pengaduanDasbor"
+                link="/pengaduan"
             />
             <Container
                 iconSrc="images/solution.png"
                 title="Buat Aspirasi"
                 description="Kirim saran dan masukan untuk layanan Itho Indostock."
-                link="/aspirasi"
+                link="/aspirasiForm"
             />
             <Container
                 iconSrc="images/note.png"
                 title="Permintaan Informasi"
                 description="Ajukan permintaan informasi terkait layanan Itho Indostock."
-                link="/permintaan-informasi"
+                link="/informasiForm"
             />
         </div>
     );

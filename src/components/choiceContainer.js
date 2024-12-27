@@ -11,8 +11,8 @@ export default function ChoiceContainer() {
     };
 
     return (
-        <div className="container flex justify-center items-center">
-            <div className="space-y-4 p-4 flex flex-row backdrop-blur-gedhe rounded-9xl w-screen">
+        <div className="container flex justify-center items-center w-3/4">
+            <div className="space-y-4 p-4 flex flex-row backdrop-blur-gedhe rounded-9xl w-full">
                 <FormPengaduan isExpanded={expandedForm === 'pengaduan'} toggleExpand={() => toggleExpand('pengaduan')} />
                 <FormAspirasi isExpanded={expandedForm === 'aspirasi'} toggleExpand={() => toggleExpand('aspirasi')} />
                 <FormInformasi isExpanded={expandedForm === 'informasi'} toggleExpand={() => toggleExpand('informasi')} />

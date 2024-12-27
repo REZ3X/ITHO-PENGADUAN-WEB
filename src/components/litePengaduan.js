@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import DataPengaduan from '@/utils/frequentlyAskedProblem';
 import { useRouter } from 'next/router';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const FAQ = () => {
     const router = useRouter();
@@ -18,7 +19,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="w-[1050px] rounded-lg mb-6 backdrop-blur-xl p-4">
+        <div className="w-3/4 bg-blue rounded-lg mb-6 backdrop-blur-xl p-4">
             <h1 className="text-3xl font-bold mb-4 text-white">FAQ</h1>
             <div className="space-y-4">
                 {randomProblems.map((problem) => (
@@ -33,7 +34,7 @@ const FAQ = () => {
                                 <span
                                     className={`ml-2 transform transition-transform duration-500 ${expandedId === problem.id ? 'rotate-180' : 'rotate-0'}`}
                                 >
-                                    ▼
+                                    <i className="bi bi-chevron-down text-xm"></i>
                                 </span>
                             </div>
                         </div>
@@ -46,7 +47,7 @@ const FAQ = () => {
                 ))}
             </div>
             <button
-                onClick={() => router.push('/pengaduanDasbor')}
+                onClick={() => router.push('/pengaduan')}
                 className="btn bg-white text-[#5a6b58] py-2 px-4 rounded mt-8"
             >
                 Lihat Semua
